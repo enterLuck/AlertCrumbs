@@ -25,7 +25,14 @@ angular.module('AlertCrumbsApp')
             'lang': 'en-US',
             'call': function(e){
             	console.log(e, ":" + $scope.platenumber);
-            	$scope.platenumber = e.substr(5,e.length);
+            	$scope.platenumber1 = e.substr(5,6);
+                $scope.platenumber2 = e.substr(6,7);
+                $scope.platenumber3 = e.substr(7,8);
+                $scope.platenumber4 = e.substr(8,9);
+                $scope.platenumber5 = e.substr(10,11);
+                $scope.platenumber6 = e.substr(11,12);
+                $scope.platenumber7 = e.substr(12,13);
+                // $scope.platenumber7 = e.substr(5,e.length); //real implementation needs e.length
             	$scope.$digest();
             }
         },

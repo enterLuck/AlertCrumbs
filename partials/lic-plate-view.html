@@ -1,11 +1,16 @@
-  <md-content class="md-padding">
-    <form name="licPlateForm">
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>License Plate #</label>
-          <input ng-bind="platenumber">{{ platenumber }}
-          <md-button class="md-raised">Submit</md-button>
-        </md-input-container>
-      </div>
-    </form> <!-- /.licPlateForm -->
-  </md-content> 
+<md-content>
+  <section layout-sm="column" layout-align="center center"
+      <div class="label">License Plate #</div>
+        <div layout="row">
+            <input ng-model="platenumber1" style="width:10px;">
+            <input ng-model="platenumber2" style="width:10px;">
+            <input ng-model="platenumber3" style="width:10px;">
+            <p>-</p>
+            <input ng-model="platenumber4" style="width:10px;">
+            <input ng-model="platenumber5" style="width:10px;">
+            <input ng-model="platenumber6" style="width:10px;">
+            <input ng-model="platenumber7" style="width:10px;">
+        </div>    
+      <md-button class="md-raised" placeholder="Submit">Submit</md-button>
+  </section> <!-- /.section -->
+</md-content> 
