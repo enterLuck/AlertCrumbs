@@ -14,10 +14,17 @@
 <body ng-class="md-whiteframe-z5">
   <header>
   </header> 
+<body>
+  <header ng-controller="HeaderCtrl" ng-hide="hide">
+    <div layout="row" layout-align="space-around center">
+      <div ><md-button href="#/lic-plate">Plates</md-button></div>
+      <div ><md-button href="#/scores">Scores</md-button></div>
+      <div ><md-button href="#/profile">Profile</md-button></div>
+    </div>
+    <md-divider></md-divider>
+  </header>
   <section>
-    <div ng-view></div>
-
-
+    <div ng-view=""></div>
   </section>
   <footer>
   </footer>  
@@ -35,14 +42,13 @@
   <script src="js/User.service.js"></script>
   <script src="js/Cars.service.js"></script>
 
+  <script src="js/HeaderCtrl.js"></script>
   <script src="js/LoginCtrl.js"></script>
   <script src="js/LicPlateCtrl.js"></script>
   <script src="js/ProfileCtrl.js"></script>
   <script src="js/ScoresCtrl.js"></script>
 
   <script src="js/routes.js"></script>
-
-
 
   <script>
 // var x = document.getElementById("demo");

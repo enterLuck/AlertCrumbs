@@ -1,5 +1,5 @@
 angular.module('AlertCrumbsApp')
-.controller('PlatesCtrl', [
+.controller('ScoresCtrl', [
 	'$scope',
 	function($scope)
 	{
