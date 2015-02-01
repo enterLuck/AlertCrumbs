@@ -1,5 +1,5 @@
 angular.module('AlertCrumbsApp')
-.controller('PlatesCtrl', [
+.controller('LicPlateCtrl', [
 	'$scope',
 	'$speechRecognition',
 	'$speechSynthetis',

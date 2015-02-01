@@ -1,20 +1,11 @@
-
-<md-content class="md-padding">
-    <form name="userForm">
+  <md-content class="md-padding">
+    <form name="licPlateForm">
       <div layout layout-sm="column">
         <md-input-container flex>
           <label>License Plate #</label>
-            <ul>
-              <li ng-repeat="licplate in licplates">
-
-              </li>
-           </ul>   
-          </div>
+          <input ng-bind="platenumber">{{ platenumber }}
+          <md-button class="md-raised">Submit</md-button>
         </md-input-container>
       </div>
-    </form>
-  </md-content>
-     <div>
-      <md-button class="md-raised">Button</md-button>
-<!--     <div ng-view></div> -->
-    </div>
+    </form> <!-- /.licPlateForm -->
+  </md-content> 

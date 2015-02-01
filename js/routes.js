@@ -7,7 +7,7 @@ angular.module('AlertCrumbsApp')
 	        controller: 'LoginCtrl'
 	      }).
 		when('/lic-plate',{
-			templateUrl: '/partials/lic-plate-view.html',
+			templateUrl: 'partials/lic-plate-view.html',
 			controller: 'LicPlateCtrl'
 		}).
 	      when('/scores', {
@@ -19,14 +19,14 @@ angular.module('AlertCrumbsApp')
 	        controller: 'ProfileCtrl'
 	      }).
 		when('/notify',{
-			templateUrl: '/partials/notify-view.html',
+			templateUrl: 'partials/notify-view.html',
 			controller: 'NotifyCtrl'
 		}).
 		when('/notify-return/:alertID',{
-			templateUrl: '/partials/notify-return-view.html',
+			templateUrl: 'partials/notify-return-view.html',
 			controller: 'NotifyReturnCtrl'
 		}).
 		otherwise({
-			redirectTo: '/login'
+			redirectTo: 'lic-plate'
 		});
 }]);
