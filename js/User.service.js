@@ -8,9 +8,9 @@ angular.module('AlertCrumbsApp')
 			{
 				var deferred = $q.defer();
 
-				deferred.resolve(500);
+				//deferred.resolve(500);
 				
-				/*
+				
 				$http.post('/users', user)
 				.success(function(data, status, headers, config) {
 					deferred.resolve(data, status);
@@ -18,7 +18,7 @@ angular.module('AlertCrumbsApp')
 			  .error(function(data, status, headers, config) {
 			  	deferred.reject(data, status);
 			  });
-			  */
+			  
 
 			  return deferred.promise;
 			},
@@ -26,9 +26,9 @@ angular.module('AlertCrumbsApp')
 			{
 				var deferred = $q.defer();
 
-				deferred.resolve(10);
+				//deferred.resolve(10);
 
-				/*
+				
 				$http.get('/users/' + username)
 				.success(function(data, status, headers, config) {
 					deferred.resolve(data, status);
@@ -36,7 +36,7 @@ angular.module('AlertCrumbsApp')
 			  .error(function(data, status, headers, config) {
 			  	deferred.reject(data, status);
 			  });
-				*/
+				
 
 				return deferred.promise;
 			}

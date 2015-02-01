@@ -27,6 +27,6 @@ angular.module('AlertCrumbsApp')
 			controller: 'NotifyReturnCtrl'
 		}).
 		otherwise({
-			redirectTo: 'lic-plate'
+			redirectTo: 'login'
 		});
 }]);

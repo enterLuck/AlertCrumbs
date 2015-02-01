@@ -6,13 +6,16 @@ angular.module('AlertCrumbsApp')
 		{
 			var deferred = $q.defer();
 
-			deferred.resolve(500);
-			/*
-			$http.get({
-				options: 'Cars/license$'
-
-			})
-*/
+			//deferred.resolve(500);
+			console.log(plate);
+			
+				$http.get('/cars/' + plate)
+				.success(function(data, status, headers, config) {
+					deferred.resolve(data, status);
+			  })
+			  .error(function(data, status, headers, config) {
+			  	deferred.reject(data, status);
+			  });
 
 			return deferred.promise;
 		}

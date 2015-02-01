@@ -18,6 +18,7 @@ angular.module('AlertCrumbsApp')
 
 	$speechRecognition.onstart(function(){
 	  //$speechSynthetis.speak('Yes? How can I help you?', 'en-US');
+      speech = $speechSynthetis;
 	});
 	$speechRecognition.onerror(function(error){
 		console.log("error:" ,error);
@@ -85,7 +86,9 @@ angular.module('AlertCrumbsApp')
 
             	Cars.send($scope.platenumber1+$scope.platenumber2+$scope.platenumber3+$scope.platenumber4+
                             $scope.platenumber5+$scope.platenumber6+$scope.platenumber7)
-            	.then(function(points){
+            	.then(function(data, status){
+                    console.log(data, status);
+
 					$mdToast.show(
 						$mdToast.simple()
 				        .content('You just earned ' + points + ' points!')
