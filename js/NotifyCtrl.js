@@ -2,10 +2,14 @@ angular.module('AlertCrumbsApp')
 .controller('NotifyCtrl', [
 	'$scope',
     '$speechRecognition',
-	function($scope,$speechRecognition)
+    '$geolocation',
+    'Cars',
+    '$location',
+	function($scope,$speechRecognition, $geolocation, Cars, $location)
 {
+    $scope.alertmessage = "There is an Alert on this vehicle! Would you like to send location to authorities?";
 
-    var msg = new SpeechSynthesisUtterance("There is an Alert on this vehicle! Would you like to send location to authorities?");
+    var msg = new SpeechSynthesisUtterance($scope.alertmessage);
     window.speechSynthesis.speak(msg);
 
 
@@ -20,14 +24,25 @@ angular.module('AlertCrumbsApp')
             'regex': /^yes/gi,
             'lang': 'en-US',
             'call': function(e){
-                $scope.$digest();
+                var location = $geolocation.getCurrentPosition({ timeout: 60000 });
+                Cars.geolocate(location)
+                .then(function()
+                {
+                    //thanks
+                    $location.path('/lic-plate');
+                },
+                function()
+                {
+                    //error
+                    $location.path('/lic-plate');
+                })
             }
         },
         {
             'regex': /^no/gi,
             'lang': 'en-US',
             'call': function(e){
-                $scope.$digest();
+                $locaiton.path('lic-plate');
             }
         }
         ]

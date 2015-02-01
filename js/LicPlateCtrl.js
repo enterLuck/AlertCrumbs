@@ -5,7 +5,8 @@ angular.module('AlertCrumbsApp')
 	'$mdToast',
 	'User',
 	'Cars',
-	function($scope, $speechRecognition, $mdToast, User, Cars)
+    '$location',
+	function($scope, $speechRecognition, $mdToast, User, Cars, $location)
 {
     $scope.platenumber1 = "1";
     $scope.platenumber2 = "2";
@@ -15,10 +16,6 @@ angular.module('AlertCrumbsApp')
     $scope.platenumber6 = "6";
 	$scope.platenumber7 = "7";
 
-	$speechRecognition.onstart(function(){
-	  //$speechSynthetis.speak('Yes? How can I help you?', 'en-US');
-      speech = $speechSynthetis;
-	});
 	$speechRecognition.onerror(function(error){
 		console.log("error:" ,error);
 	});
@@ -90,10 +87,15 @@ angular.module('AlertCrumbsApp')
 
 					$mdToast.show(
 						$mdToast.simple()
-				        .content('You just earned ' + points + ' points!')
+				        .content('You just earned ' + data.points + ' points!')
 				        .position('bottom left')
 				        .hideDelay(1000)
 			        );
+
+                    if(data.wanted)
+                    {
+                        $location.path('/notify');
+                    }
             	})
             }
         },
