@@ -1,4 +1,4 @@
-angular.module('speechApp')
+angular.module('AlertCrumbsApp')
 .controller('ProfileCtrl', [
 	'$scope',
 	function($scope)

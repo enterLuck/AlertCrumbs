@@ -1,4 +1,4 @@
-angular.module('speechApp')
+angular.module('AlertCrumbsApp')
 .factory('Cars', ['$q', function($q)
 {
 	return {

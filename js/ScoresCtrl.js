@@ -1,4 +1,4 @@
-angular.module('speechApp')
+angular.module('AlertCrumbsApp')
 .controller('PlatesCtrl', [
 	'$scope',
 	function($scope)

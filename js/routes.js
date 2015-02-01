@@ -1,24 +1,32 @@
-angular.module('speechApp')
+angular.module('AlertCrumbsApp')
 .config(['$routeProvider', function($routeProvider)
 {
 	$routeProvider.
 	      when('/login', {
-	        templateUrl: 'partials/login.html',
+	        templateUrl: 'partials/login-view.html',
 	        controller: 'LoginCtrl'
 	      }).
-	      when('/plate', {
-	        templateUrl: 'partials/plates.html',
-	        controller: 'PlatesCtrl'
-	      }).
+		when('/lic-plate',{
+			templateUrl: '/partials/lic-plate-view.html',
+			controller: 'LicPlateCtrl'
+		}).
 	      when('/scores', {
-	        templateUrl: 'partials/scores.html',
+	        templateUrl: 'partials/scores-view.html',
 	        controller: 'ScoresCtrl'
 	      }).
 	      when('/profile', {
-	        templateUrl: 'partials/profile.html',
+	        templateUrl: 'partials/profile-view.html',
 	        controller: 'ProfileCtrl'
 	      }).
-	      otherwise({
-	        redirectTo: '/login'
-	      });
-}])
+		when('/notify',{
+			templateUrl: '/partials/notify-view.html',
+			controller: 'NotifyCtrl'
+		}).
+		when('/notify-return/:alertID',{
+			templateUrl: '/partials/notify-return-view.html',
+			controller: 'NotifyReturnCtrl'
+		}).
+		otherwise({
+			redirectTo: '/login'
+		});
+}]);
