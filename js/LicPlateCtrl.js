@@ -2,11 +2,10 @@ angular.module('AlertCrumbsApp')
 .controller('LicPlateCtrl', [
 	'$scope',
 	'$speechRecognition',
-	'$speechSynthetis',
 	'$mdToast',
 	'User',
 	'Cars',
-	function($scope, $speechRecognition, $speechSynthetis, $mdToast, User, Cars)
+	function($scope, $speechRecognition, $mdToast, User, Cars)
 {
     $scope.platenumber1 = "1";
     $scope.platenumber2 = "2";
