@@ -1,9 +1,13 @@
 angular.module('AlertCrumbsApp')
-.factory('User', ['$q', function($q)
+.factory('User', ['$q', '$http', function($q, $http)
 {
 	return {
 		score:
 		{
+			create: function(user)
+			{
+				//$http.post(user)
+			},
 			get: function()
 			{
 				var deferred = $q.defer();

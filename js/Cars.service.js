@@ -1,5 +1,5 @@
 angular.module('AlertCrumbsApp')
-.factory('Cars', ['$q', function($q)
+.factory('Cars', ['$q', '$http', function($q, $http)
 {
 	return {
 		send: function(plate)
@@ -7,6 +7,12 @@ angular.module('AlertCrumbsApp')
 			var deferred = $q.defer();
 
 			deferred.resolve(500);
+			/*
+			$http.get({
+				options: 'Cars/license$'
+
+			})
+*/
 
 			return deferred.promise;
 		}
