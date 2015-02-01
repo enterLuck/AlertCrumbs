@@ -2,6 +2,7 @@ var AlertCrumbsApp = angular.module('AlertCrumbsApp',
 [
 	'adaptive.speech',
 	'ngMaterial',
-	'ngRoute'
+	'ngRoute',
+	'ngGeolocation'
 	//,'ngMessages'
 ]);
