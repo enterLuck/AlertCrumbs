@@ -8,7 +8,13 @@ angular.module('AlertCrumbsApp')
 	'Cars',
 	function($scope, $speechRecognition, $speechSynthetis, $mdToast, User, Cars)
 {
-	$scope.platenumber = "123";
+    $scope.platenumber1 = "1";
+    $scope.platenumber2 = "2";
+    $scope.platenumber3 = "3";
+    $scope.platenumber4 = "4";
+    $scope.platenumber5 = "5";
+    $scope.platenumber6 = "6";
+	$scope.platenumber7 = "7";
 
 	$speechRecognition.onstart(function(){
 	  //$speechSynthetis.speak('Yes? How can I help you?', 'en-US');
@@ -24,14 +30,15 @@ angular.module('AlertCrumbsApp')
             'regex': /^plate .+/gi,
             'lang': 'en-US',
             'call': function(e){
-            	console.log(e, ":" + $scope.platenumber);
-            	$scope.platenumber1 = e.substr(5,6);
-                $scope.platenumber2 = e.substr(6,7);
-                $scope.platenumber3 = e.substr(7,8);
-                $scope.platenumber4 = e.substr(8,9);
-                $scope.platenumber5 = e.substr(10,11);
-                $scope.platenumber6 = e.substr(11,12);
-                $scope.platenumber7 = e.substr(12,13);
+            	console.log(e, ":" + $scope.platenumber1+$scope.platenumber2+$scope.platenumber3+$scope.platenumber4+
+                    $scope.platenumber5+$scope.platenumber6+$scope.platenumber7);
+            	$scope.platenumber1 = e.substr(6,1);
+                $scope.platenumber2 = e.substr(7,1);
+                $scope.platenumber3 = e.substr(8,1);
+                $scope.platenumber4 = e.substr(9,1);
+                $scope.platenumber5 = e.substr(10,1);
+                $scope.platenumber6 = e.substr(11,1);
+                $scope.platenumber7 = e.substr(12,1);
                 // $scope.platenumber7 = e.substr(5,e.length); //real implementation needs e.length
             	$scope.$digest();
             }
@@ -40,7 +47,13 @@ angular.module('AlertCrumbsApp')
             'regex': /^reset/gi,
             'lang': 'en-US',
             'call': function(){
-            	$scope.platenumber = "";
+                $scope.platenumber1 = "";
+                $scope.platenumber2 = "";
+                $scope.platenumber3 = "";
+                $scope.platenumber4 = "";
+                $scope.platenumber5 = "";
+                $scope.platenumber6 = "";
+            	$scope.platenumber7 = "";
             	$scope.$digest();
             }
         },
@@ -48,7 +61,13 @@ angular.module('AlertCrumbsApp')
             'regex': /^clear/gi,
             'lang': 'en-US',
             'call': function(){
-            	$scope.platenumber = "";
+                $scope.platenumber1 = "";
+                $scope.platenumber2 = "";
+                $scope.platenumber3 = "";
+                $scope.platenumber4 = "";
+                $scope.platenumber5 = "";
+                $scope.platenumber6 = "";
+            	$scope.platenumber7 = "";
             	$scope.$digest();
             }
         },
@@ -64,7 +83,8 @@ angular.module('AlertCrumbsApp')
 			        .hideDelay(1000)
 			    );
 
-            	Cars.send($scope.platenumber)
+            	Cars.send($scope.platenumber1+$scope.platenumber2+$scope.platenumber3+$scope.platenumber4+
+                            $scope.platenumber5+$scope.platenumber6+$scope.platenumber7)
             	.then(function(points){
 					$mdToast.show(
 						$mdToast.simple()
