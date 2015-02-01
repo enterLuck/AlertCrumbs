@@ -1,1 +1,40 @@
-profile
+<div layout="column">
+  <md-content md-theme="docs-dark" class="md-padding" layout="row" layout-sm="column">
+    <md-input-container>
+      <label>Email</label>
+      <input ng-model="email" type="email" ng-value="{{email}}">
+    </md-input-container>
+  </md-content>
+  <md-content class="md-padding">
+    <form name="userForm">
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>First Name</label>
+          <input ng-model="firstName" ng-value="{{firstName}}">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Last Name</label>
+          <input ng-model="lastName" ng-value="{{lastName}}">
+        </md-input-container>
+      </div>
+      <md-input-container flex>
+        <label>Address</label>
+        <input ng-model="address" ng-value="{{address}}">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>City</label>
+          <input ng-model="city" ng-value="{{city}}">
+        </md-input-container>
+        <md-input-container flex>
+          <label>State</label>
+          <input ng-model="state" ng-value="{{state}}">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Postal Code</label>
+          <input ng-model="postalCode" ng-value="{{postalCode}}">
+        </md-input-container>
+      </div>
+    </form>
+  </md-content>
+</div>

@@ -1,1 +1,19 @@
-scores
+<md-content>
+    <md-list>
+      <md-item ng-repeat="scoremessage in scoremessages">
+        <md-item-content>
+          <div class="md-tile-left">
+            <img ng-src="{{scoremessage.face}}" class="face" alt="{{scoremessage.who}}">
+          </div>
+          <div class="md-tile-content">
+            <h3>{{scoremessage.what}}</h3>
+            <h4>{{scoremessage.who}}</h4>
+            <p>
+              {{scoremessage.notes}}
+            </p>
+          </div>
+        </md-item-content>
+        <md-divider md-inset ng-if="!$last"></md-divider>
+      </md-item>
+    </md-list>
+</md-content>

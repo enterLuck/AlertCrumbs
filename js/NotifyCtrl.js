@@ -29,7 +29,7 @@ angular.module('AlertCrumbsApp')
                 .then(function()
                 {
                     //thanks
-                    $location.path('/lic-plate');
+                    $location.path('/notify-return');
                 },
                 function()
                 {
@@ -42,7 +42,7 @@ angular.module('AlertCrumbsApp')
             'regex': /^no/gi,
             'lang': 'en-US',
             'call': function(e){
-                $locaiton.path('lic-plate');
+                $location.path('/lic-plate');
             }
         }
         ]

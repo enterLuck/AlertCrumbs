@@ -8,13 +8,13 @@ angular.module('AlertCrumbsApp')
     '$location',
 	function($scope, $speechRecognition, $mdToast, User, Cars, $location)
 {
-    $scope.platenumber1 = "1";
-    $scope.platenumber2 = "2";
-    $scope.platenumber3 = "3";
-    $scope.platenumber4 = "4";
-    $scope.platenumber5 = "5";
-    $scope.platenumber6 = "6";
-	$scope.platenumber7 = "7";
+    $scope.platenumber1 = " ";
+    $scope.platenumber2 = " ";
+    $scope.platenumber3 = " ";
+    $scope.platenumber4 = " ";
+    $scope.platenumber5 = " ";
+    $scope.platenumber6 = " ";
+	$scope.platenumber7 = " ";
 
 	$speechRecognition.onerror(function(error){
 		console.log("error:" ,error);

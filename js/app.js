@@ -4,5 +4,4 @@ var AlertCrumbsApp = angular.module('AlertCrumbsApp',
 	'ngMaterial',
 	'ngRoute',
 	'ngGeolocation'
-	//,'ngMessages'
 ]);
