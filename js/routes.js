@@ -22,7 +22,7 @@ angular.module('AlertCrumbsApp')
 			templateUrl: 'partials/notify-view.html',
 			controller: 'NotifyCtrl'
 		}).
-		when('/notify-return/:alertID',{
+		when('/notify-return',{
 			templateUrl: 'partials/notify-return-view.html',
 			controller: 'NotifyReturnCtrl'
 		}).

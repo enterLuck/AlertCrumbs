@@ -16,10 +16,10 @@
   </header> 
 <body>
   <header ng-controller="HeaderCtrl" ng-hide="hide">
-    <div layout="row" layout-align="space-around center">
-      <div ><md-button href="#/lic-plate">Plates</md-button></div>
-      <div ><md-button href="#/scores">Scores</md-button></div>
-      <div ><md-button href="#/profile">Profile</md-button></div>
+    <div layout="row" layout-align="center">
+      <div><md-button class="md-raised md-dark" href="#/lic-plate">Plates</md-button></div>
+      <div><md-button class="md-raised md-dark" href="#/scores">Scores</md-button></div>
+      <div><md-button class="md-raised md-dark" href="#/profile">Profile</md-button></div>
     </div>
     <md-divider></md-divider>
   </header>
@@ -51,19 +51,5 @@
 
   <script src="js/routes.js"></script>
 
-  <script>
-// var x = document.getElementById("demo");
-// function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     } else {
-//         x.innerHTML = "Geolocation is not supported by this browser.";
-//     }
-// }
-// function showPosition(position) {
-//     x.innerHTML = "Latitude: " + position.coords.latitude + 
-//     "<br>Longitude: " + position.coords.longitude; 
-// }
-</script>
 </body>
 </html>
